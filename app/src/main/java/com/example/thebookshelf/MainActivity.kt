@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                 val viewModel: BooksViewModel = viewModel(factory = BooksViewModel.Factory)
 
                 androidx.compose.runtime.LaunchedEffect(Unit) {
-                    viewModel.getBooks("harry potter")
+                    viewModel.getBooks("messi")
                 }
 
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
