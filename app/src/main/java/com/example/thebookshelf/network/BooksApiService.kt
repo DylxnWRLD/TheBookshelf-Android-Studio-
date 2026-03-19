@@ -10,12 +10,12 @@ interface BooksApiService {
     @GET("volumes")
     suspend fun getBooks(
         @Query("q") query: String,
-        @Query("key") apiKey: String = "AIzaSyCPaC7MqGIIk-LW4OK8eB7uS_w_ySiExfI"
+        @Query("key") apiKey: String = ""
     ): BookResponse
 
     @GET("volumes/{id}")
     suspend fun getBook(
         @Path("id") bookId: String,
-        @Query("key") apiKey: String = "AIzaSyCPaC7MqGIIk-LW4OK8eB7uS_w_ySiExfI"
+        @Query("key") apiKey: String = ""
     ): Book
 }
